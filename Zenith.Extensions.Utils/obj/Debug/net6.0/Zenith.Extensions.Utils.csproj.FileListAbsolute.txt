@@ -1,0 +1,5 @@
+D:\Projects\Zenith.Extensions.Utils\obj\Debug\net6.0\Zenith.Extensions.Utils.csproj.AssemblyReference.cache
+D:\Projects\Zenith.Extensions.Utils\obj\Debug\net6.0\Zenith.Extensions.Utils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Zenith.Extensions.Utils\obj\Debug\net6.0\Zenith.Extensions.Utils.AssemblyInfoInputs.cache
+D:\Projects\Zenith.Extensions.Utils\obj\Debug\net6.0\Zenith.Extensions.Utils.AssemblyInfo.cs
+D:\Projects\Zenith.Extensions.Utils\obj\Debug\net6.0\Zenith.Extensions.Utils.csproj.CoreCompileInputs.cache
