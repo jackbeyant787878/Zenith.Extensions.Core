@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../Zenith.Extensions.Elasticsearch/Zenith.Extensions.Elasticsearch.csproj" />
+  <Project Path="../Zenith.Extensions.RabbitMQ/Zenith.Extensions.RabbitMQ.csproj" />
+  <Project Path="../Zenith.Extensions.Redis/Zenith.Extensions.Redis.csproj" />
+  <Project Path="../Zenith.Extensions.Utils/Zenith.Extensions.Utils.csproj" />
+</Solution>
