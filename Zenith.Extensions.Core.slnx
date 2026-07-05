@@ -3,4 +3,5 @@
   <Project Path="../Zenith.Extensions.RabbitMQ/Zenith.Extensions.RabbitMQ.csproj" />
   <Project Path="../Zenith.Extensions.Redis/Zenith.Extensions.Redis.csproj" />
   <Project Path="../Zenith.Extensions.Utils/Zenith.Extensions.Utils.csproj" />
+  <Project Path="Zenith.Extensions.Common/Zenith.Extensions.Common.csproj" Id="b0ddf218-18d7-4c1c-a0e7-740cf2b0b70d" />
 </Solution>
