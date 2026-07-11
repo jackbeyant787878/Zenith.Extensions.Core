@@ -1,16 +1,40 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0</Version>
+		<AssemblyTitle>Consul Service Registration Library</AssemblyTitle>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>Automatic microservice registration and health check linkage component based on .NET 6+ and Consul.</Description>
+		<Authors>Jack Bryant</Authors>
 
-  <ItemGroup>
-    <PackageReference Include="Consul" Version="1.8.0" />
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.9" />
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="10.0.9" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.9" />
-  </ItemGroup>
+		<!-- Release Notes -->
+		<PackageReleaseNotes>
+			1. Refactored with BackgroundService + PeriodicTimer to fully adapt to the .NET 6+ asynchronous host lifecycle.
+			2. Optimized compatibility with K8s container environment, reading the POD_IP environment variable with higher priority.
+			3. Integrated native HealthCheckService with Consul TTL heartbeat reporting mechanism for linked health status reporting.
+		</PackageReleaseNotes>
 
+		<!-- Project Homepage URL -->
+		<PackageProjectUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core</PackageProjectUrl>
+
+		<!-- Repository Type & Repository Address -->
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Consul</RepositoryUrl>
+
+		<!-- Optional: Specify main branch name -->
+		<RepositoryBranch>main</RepositoryBranch>
+		<PackageReadmeFile>NET Consul Automatic Service Registration Component.md</PackageReadmeFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="NET Consul Automatic Service Registration Component.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Consul" Version="1.8.0" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.9" />
+	</ItemGroup>
 </Project>

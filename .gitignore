@@ -10,3 +10,5 @@
 /Zenith.Extensions.Utils/obj/project.assets.json
 /Zenith.Extensions.Utils/obj/Debug/net6.0/Zenith.Extensions.Utils.AssemblyInfoInputs.cache
 /Zenith.Extensions.Consul/obj
+/Zenith.Extensions.Consul/bin/Debug/net6.0
+/Zenith.Extensions.Consul/bin/Debug
