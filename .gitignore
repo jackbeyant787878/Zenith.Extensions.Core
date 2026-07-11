@@ -12,3 +12,8 @@
 /Zenith.Extensions.Consul/obj
 /Zenith.Extensions.Consul/bin/Debug/net6.0
 /Zenith.Extensions.Consul/bin/Debug
+/Zenith.Extensions.Common/bin/Debug/net6.0
+/Zenith.Extensions.Redis/.vs/ProjectEvaluation
+/Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/DesignTimeBuild
+/Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/FileContentIndex
+/Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/v18

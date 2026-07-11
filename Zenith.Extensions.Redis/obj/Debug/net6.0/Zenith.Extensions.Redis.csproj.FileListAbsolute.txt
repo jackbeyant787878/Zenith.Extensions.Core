@@ -1,0 +1,13 @@
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\bin\Debug\net6.0\Zenith.Extensions.Redis.deps.json
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\bin\Debug\net6.0\Zenith.Extensions.Redis.dll
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\bin\Debug\net6.0\Zenith.Extensions.Redis.pdb
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.csproj.AssemblyReference.cache
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.AssemblyInfoInputs.cache
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.AssemblyInfo.cs
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.csproj.CoreCompileInputs.cache
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.sourcelink.json
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.dll
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\refint\Zenith.Extensions.Redis.dll
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\Zenith.Extensions.Redis.pdb
+D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\obj\Debug\net6.0\ref\Zenith.Extensions.Redis.dll

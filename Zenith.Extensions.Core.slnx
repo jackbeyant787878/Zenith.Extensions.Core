@@ -1,8 +1,7 @@
 <Solution>
   <Project Path="../Zenith.Extensions.Elasticsearch/Zenith.Extensions.Elasticsearch.csproj" />
-  <Project Path="../Zenith.Extensions.RabbitMQ/Zenith.Extensions.RabbitMQ.csproj" />
-  <Project Path="../Zenith.Extensions.Redis/Zenith.Extensions.Redis.csproj" />
   <Project Path="../Zenith.Extensions.Utils/Zenith.Extensions.Utils.csproj" />
   <Project Path="Zenith.Extensions.Common/Zenith.Extensions.Common.csproj" Id="b0ddf218-18d7-4c1c-a0e7-740cf2b0b70d" />
   <Project Path="Zenith.Extensions.Consul/Zenith.Extensions.Consul.csproj" Id="ec864d27-6c30-42bd-84ce-e602a36734c3" />
+  <Project Path="Zenith.Extensions.Redis/Zenith.Extensions.Redis.csproj" Id="d2849d48-e649-4efa-b10b-8103644c842a" />
 </Solution>

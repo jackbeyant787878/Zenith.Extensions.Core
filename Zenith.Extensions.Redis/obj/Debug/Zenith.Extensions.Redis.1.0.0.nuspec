@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Zenith.Extensions.Redis</id>
+    <version>1.0.0</version>
+    <authors>Jack Bryant</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>NET Redis Service Registration Component.md</readme>
+    <projectUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core</projectUrl>
+    <description>Redis service registration and management library based on .NET 6+.</description>
+    <releaseNotes>Fully compatible with .NET 6+ and Redis service registration and management scenarios.</releaseNotes>
+    <repository type="git" url="https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Redis" branch="main" commit="35b6602c2aa87e0ea9ba6d27ece2c1c4671c0a0a" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="CSRedisCore" version="3.8.807" exclude="Build,Analyzers" />
+        <dependency id="StackExchange.Redis" version="3.0.11" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\bin\Debug\net6.0\Zenith.Extensions.Redis.dll" target="lib\net6.0\Zenith.Extensions.Redis.dll" />
+    <file src="D:\Projects\Zenith.Extensions.Core\Zenith.Extensions.Redis\NET Redis Service Registration Component.md" target="\NET Redis Service Registration Component.md" />
+  </files>
+</package>

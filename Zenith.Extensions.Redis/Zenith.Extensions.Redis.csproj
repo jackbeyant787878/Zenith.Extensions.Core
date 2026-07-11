@@ -1,9 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0</Version>
+		<AssemblyTitle>Redis Service Registration Library</AssemblyTitle>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>Redis service registration and management library based on .NET 6+.</Description>
+		<Authors>Jack Bryant</Authors>
+		<!-- Release Notes -->
+		<PackageReleaseNotes>
+			Fully compatible with .NET 6+ and Redis service registration and management scenarios.
+		</PackageReleaseNotes>
+
+		<!-- Project Homepage URL -->
+		<PackageProjectUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core</PackageProjectUrl>
+
+		<!-- Repository Type & Repository Address -->
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Redis</RepositoryUrl>
+
+		<!-- Optional: Specify main branch name -->
+		<RepositoryBranch>main</RepositoryBranch>
+		<PackageReadmeFile>NET Redis Service Registration Component.md</PackageReadmeFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="NET Redis Service Registration Component.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="CSRedisCore" Version="3.8.807" />
+		<PackageReference Include="StackExchange.Redis" Version="3.0.11" />
+	</ItemGroup>
 
 </Project>
