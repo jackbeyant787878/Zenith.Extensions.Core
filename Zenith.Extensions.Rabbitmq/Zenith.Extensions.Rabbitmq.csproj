@@ -19,7 +19,7 @@
 
 		<!-- Repository Type & Repository Address -->
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Redis</RepositoryUrl>
+		<RepositoryUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Rabbitmq</RepositoryUrl>
 
 		<!-- Optional: Specify main branch name -->
 		<RepositoryBranch>main</RepositoryBranch>
