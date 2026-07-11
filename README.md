@@ -1,139 +1,47 @@
-# Zenith\.Extensions\.Elasticsearch
+# Zenith\.Extensions Solution
 
-# Zenith\.Extensions\.Elasticsearch
+## Overview
 
-A **production\-grade, high\-availability Elasticsearch helper library** for \.NET, built on the official modern `Elastic.Clients.Elasticsearch 9.0+` SDK\. This package provides encapsulated synchronous/asynchronous indexing, built\-in **circuit breaker failure protection**, environment\-based configuration, socket exhaustion prevention, and automatic service recovery — ready for high\-concurrency production logging and document indexing scenarios\.
+**Zenith\.Extensions** is a high\-quality, production\-ready \.NET infrastructure component suite, fully open\-source and published on **NuGet\.org**\. All libraries are designed for modern \.NET microservice architectures, providing encapsulated, high\-availability, thread\-safe middleware capabilities to eliminate repetitive infrastructure coding and unify project technical specifications\.
 
-## ✨ Core Features
+Every sub\-project maintains independent NuGet packages, standalone documentation, complete DI integration examples and production\-grade fault\-tolerant strategies, supporting global developer installation and usage\.
 
-- **Modern Elasticsearch 9\.x Support**: Fully adapted to the latest official client API and response validation rules
+## 📦 Included NuGet Packages
 
-- **Built\-in Circuit Breaker**: Rolling 10s failure statistics, automatic trip \& 90s cooldown recovery to avoid avalanche failure
+### 1\. Zenith\.Extensions\.Redis
 
-- **Global Singleton Client**: Single reusable Elasticsearch client to completely solve socket exhaustion under high QPS
+Lightweight and high\-performance Redis operation library based on **StackExchange\.Redis**\. Fully encapsulates String, Set, Hash common data structures, supports generic auto serialization, sync/async dual APIs and null safety processing\. Simplifies Redis cache development for \.NET applications\.
 
-- **Environment Variable Configuration**: Dynamic endpoint loading via `ELASTICSEARCH_URL`, with intelligent fallback default value
+### 2\. Zenith\.Extensions\.RabbitMQ
 
-- **Dual Sync / Async API**: Provides both `LogAsync` and `Log` for flexible business usage
+Production\-level RabbitMQ message queue SDK based on the latest **RabbitMQ\.Client v7\.x full\-async API**\. Implements persistent connection auto\-reconnection, publisher confirm reliable delivery, dead\-letter \& delay queue mechanism\. Supports Direct / Fanout / Topic / Headers four exchange routing modes, with thread\-safe channel management and unroutable message monitoring\.
 
-- **Automatic Index Normalization**: Auto convert index name to lowercase to comply with Elasticsearch 9\.x strict rules
+### 3\. Zenith\.Extensions\.Consul
 
-- **Structured Logging Integration**: Built\-in ILogger error/warning/critical logs for troubleshooting
+Standardized Consul service registration \& discovery extension component\. Provides automatic service health check, dynamic node query and graceful offline capabilities, perfectly adapted to \.NET microservice service governance scenarios\.
 
-- **High Concurrency Safe**: Thread\-safe failure queue \& lock\-free state judgment, optimized for heavy traffic
+### 4\. Zenith\.Extensions\.Elasticsearch
 
-## 📦 Installation
+High\-availability Elasticsearch logging component built on **Elastic\.Clients\.Elasticsearch 9\.x**\. Features a custom rolling\-window **circuit breaker**, singleton client anti\-socket\-exhaustion design, environment variable dynamic configuration, and automatic index normalization\. Effectively prevents service avalanche under high\-concurrency log writing scenarios\.
 
-### \.NET CLI
+## ✨ Unified Technical Features
 
-```Plain Text
-dotnet add package Zenith.Extensions.Elasticsearch
-```
+- **Modern \.NET Friendly**: Fully compatible with all \.NET 6\+ modern runtime versions, supporting the native async/await programming model
 
-### NuGet Package Manager
+- **DI Native Support**: All components support ASP\.NET Core dependency injection, conforming to \.NET official design specifications
 
-```Plain Text
-Install-Package Zenith.Extensions.Elasticsearch
-```
+- **Production Fault Tolerance**: Built\-in retry, circuit breaker, connection recovery, thread\-safe control for enterprise\-level stability
 
-## ⚙️ Environment Configuration
+- **Engineering Standardization**: Independent English README, complete usage examples, release notes and best practices for each package
 
-The library automatically reads the Elasticsearch connection address from environment variables:
+- **Zero Intrusive**: Lightweight encapsulation, no redundant dependencies, easy access and low transformation cost
 
-- **Key**: `ELASTICSEARCH_URL`
+## 🚀 Usage
 
-- **Default fallback**: `http://localhost:9200`
-
-- **Request Timeout**: Fixed 2 seconds for fast failure response
-
-## 🚀 DI Integration \(ASP\.NET Core\)
-
-Standard dependency injection registration with logger support:
-
-```Plain Text
-// Program.cs
-builder.Services.AddScoped<ElasticSearchHelper>(sp =>
-{
-    var logger = sp.GetService<ILogger<ElasticSearchHelper>>();
-    return new ElasticSearchHelper(logger);
-});
-```
-
-## 📝 Usage Examples
-
-### Asynchronous Indexing \(Recommended\)
-
-```Plain Text
-public class LogService
-{
-    private readonly ElasticSearchHelper _esHelper;
-
-    public LogService(ElasticSearchHelper esHelper)
-    {
-        _esHelper = esHelper;
-    }
-
-    public async Task WriteLogAsync()
-    {
-        var logModel = new
-        {
-            Message = "System running log",
-            CreateTime = DateTime.UtcNow,
-            Level = "Info"
-        };
-
-        // Index name will auto convert to lowercase
-        await _esHelper.LogAsync("system-log", logModel);
-    }
-}
-```
-
-### Synchronous Indexing
-
-```Plain Text
-_esHelper.Log("business-log", new { OrderId = 10001, Status = "Success" });
-```
-
-## 🛡️ Built\-in Circuit Breaker Mechanism
-
-This library implements a **rolling window circuit breaker** to protect downstream Elasticsearch clusters in high\-concurrency scenarios:
-
-- **Trigger Rule**: Trip circuit if **3 failures occur within 10 seconds**
-
-- **Protection Duration**: 90 seconds cooling window
-
-- **Auto Recovery**: Automatically close circuit and resume traffic after cooldown
-
-- **Failure Isolation**: Reject new requests actively to prevent service avalanche
-
-## 📚 API Reference
-
-- `LogAsync<T>(string index, T data)`
-Asynchronously write generic document data to specified index
-
-- `Log<T>(string index, T data)`
-Synchronously write generic document data to specified index
-
-## 🔧 Supported Frameworks \& Dependencies
-
-- **Target Frameworks**: \.NET 6 / \.NET 7 / \.NET 8 / \.NET 9\+
-
-- **Core Dependency**: Elastic\.Clients\.Elasticsearch 9\.0\+
-
-- **Logging**: Microsoft\.Extensions\.Logging
-
-## 💡 Production Best Practices
-
-- Set `ELASTICSEARCH_URL` environment variable in staging/production environments
-
-- Prefer async `LogAsync` in web applications to improve throughput
-
-- Leverage built\-in circuit breaker to avoid massive error cascades during ES cluster downtime
-
-- Reuse helper instance via DI to maintain singleton ES client connection
+Each module is independently released to NuGet\.org\. Developers can install any single component via `dotnet add package` according to business requirements, without introducing redundant modules\.
 
 ## 📄 License
 
-Open\-source library for commercial and non\-commercial use\. Free to reference, extend and optimize\.
+All Zenith\.Extensions open\-source libraries are free for personal, open\-source and commercial projects\. Welcome to use, learn and expand secondary functions\.
 
 > （注：部分内容可能由 AI 生成）
