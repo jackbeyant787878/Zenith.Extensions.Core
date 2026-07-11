@@ -1,8 +1,8 @@
 # Zenith\.Extensions\.Elasticsearch
 
-# Zenith\.Extensions\.Elasticsearch
-
 A **production\-grade, high\-availability Elasticsearch helper library** for \.NET, built on the official modern `Elastic.Clients.Elasticsearch 9.0+` SDK\. This package provides encapsulated synchronous/asynchronous indexing, built\-in **circuit breaker failure protection**, environment\-based configuration, socket exhaustion prevention, and automatic service recovery — ready for high\-concurrency production logging and document indexing scenarios\.
+
+<img width="1463" height="538" alt="image" src="https://github.com/user-attachments/assets/b9481198-24af-48cb-a1a8-ecf3a97bbd8d" />
 
 ## ✨ Core Features
 
