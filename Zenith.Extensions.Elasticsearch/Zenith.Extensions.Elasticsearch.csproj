@@ -1,16 +1,39 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0</Version>
+		<AssemblyTitle>ElasticSearch Logging Library</AssemblyTitle>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>ElasticSearch Logging Library</Description>
+		<Authors>Jack Bryant</Authors>
 
-  <ItemGroup>
-    <PackageReference Include="Elastic.Clients.Elasticsearch" Version="9.4.2" />
-    <PackageReference Include="log4net" Version="3.3.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.9" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-  </ItemGroup>
+		<!-- Release Notes -->
+		<PackageReleaseNotes>
+		  ElasticSearch Logging Library initial release.
+		</PackageReleaseNotes>
+
+		<!-- Project Homepage URL -->
+		<PackageProjectUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core</PackageProjectUrl>
+
+		<!-- Repository Type & Repository Address -->
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Elasticsearch</RepositoryUrl>
+
+		<!-- Optional: Specify main branch name -->
+		<RepositoryBranch>main</RepositoryBranch>
+		<PackageReadmeFile>ElasticSearch Logging Library.md</PackageReadmeFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="ElasticSearch Logging Library.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Elastic.Clients.Elasticsearch" Version="9.4.2" />
+		<PackageReference Include="log4net" Version="3.3.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="10.0.9" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
 
 </Project>
