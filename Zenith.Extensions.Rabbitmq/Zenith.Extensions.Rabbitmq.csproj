@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0</Version>
+		<AssemblyTitle>RabbitMQ Service Registration Library</AssemblyTitle>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>RabbitMQ service registration and management library based on .NET 6+.</Description>
+		<Authors>Jack Bryant</Authors>
+		<!-- Release Notes -->
+		<PackageReleaseNotes>
+			Fully compatible with .NET 6+ and RabbitMQ service registration and management scenarios.
+		</PackageReleaseNotes>
+
+		<!-- Project Homepage URL -->
+		<PackageProjectUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core</PackageProjectUrl>
+
+		<!-- Repository Type & Repository Address -->
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/jackbeyant787878/Zenith.Extensions.Core/tree/master/Zenith.Extensions.Redis</RepositoryUrl>
+
+		<!-- Optional: Specify main branch name -->
+		<RepositoryBranch>main</RepositoryBranch>
+		<PackageReadmeFile>Zenith.Extensions.RabbitMQ.md</PackageReadmeFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="Zenith.Extensions.RabbitMQ.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Connections.Abstractions" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.9" />
+		<PackageReference Include="RabbitMQ.Client" Version="7.2.1" />
+	</ItemGroup>
+
+</Project>

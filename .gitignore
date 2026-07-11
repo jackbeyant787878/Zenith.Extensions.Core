@@ -17,3 +17,5 @@
 /Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/DesignTimeBuild
 /Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/FileContentIndex
 /Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/v18
+/Zenith.Extensions.Rabbitmq/obj
+/Zenith.Extensions.Rabbitmq/bin/Debug/net6.0
