@@ -19,3 +19,11 @@
 /Zenith.Extensions.Redis/.vs/Zenith.Extensions.Redis/v18
 /Zenith.Extensions.Rabbitmq/obj
 /Zenith.Extensions.Rabbitmq/bin/Debug/net6.0
+/Zenith.Extensions.Elasticsearch/bin/Debug/net6.0
+/Zenith.Extensions.Elasticsearch/obj/Zenith.Extensions.Elasticsearch.csproj.nuget.dgspec.json
+/Zenith.Extensions.Elasticsearch/obj/Zenith.Extensions.Elasticsearch.csproj.nuget.g.props
+/Zenith.Extensions.Elasticsearch/obj/Zenith.Extensions.Elasticsearch.csproj.nuget.g.targets
+/Zenith.Extensions.Elasticsearch/obj/project.nuget.cache
+/Zenith.Extensions.Elasticsearch/obj/project.assets.json
+/Zenith.Extensions.Elasticsearch/obj/Debug/net6.0
+/Zenith.Extensions.Redis/obj/Debug/net6.0/Zenith.Extensions.Redis.AssemblyInfo.cs
