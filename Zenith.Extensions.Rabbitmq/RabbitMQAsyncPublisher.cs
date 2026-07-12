@@ -35,24 +35,6 @@ namespace Zenith.Extensions.RabbitMQ
         /// <summary>
         /// Initializes the connection and channel, enabling v7 fully asynchronous publisher tracking.
         /// </summary>
-        public async Task InitializeAsync()
-        {
-            if (_isInitialized) return;
-
-            // 1. Create the connection asynchronously
-            _connection = await _factory.CreateConnectionAsync();
-
-            // 2. Pass read-only options into the constructor to enable publisher confirmations and built-in tracking (replacing the legacy ConfirmSelect)
-            var channelOptions = new CreateChannelOptions(publisherConfirmationsEnabled: true,publisherConfirmationTrackingEnabled: true);
-
-            // 3. Create the channel asynchronously
-            _channel = await _connection.CreateChannelAsync(channelOptions);
-
-            // 4. Attach the v7 asynchronous return event listener (replacing the legacy synchronous BasicReturn event)
-            _channel.BasicReturnAsync += OnMessageReturnedAsync;
-
-            _isInitialized = true;
-        }
 
         /// <summary>
         /// Core: Declares the dead-letter infrastructure (Dead-Letter Exchange + Dead-Letter Queue + Binding) in one go.
@@ -104,12 +86,7 @@ namespace Zenith.Extensions.RabbitMQ
         /// </summary>
         /// <param name="messageTtlMs">Optional. Corresponds to the per-message expiration setting (unit: milliseconds).</param>
         /// <param name="mandatory">Defaults to true. If routing fails, it will trigger the BasicReturnAsync asynchronous callback.</param>
-        public async Task PublishAsync(
-            string exchange,
-            string routingKey,
-            string message,
-            int? messageTtlMs = null,
-            bool mandatory = true)
+        public async Task PublishAsync(string exchange, string routingKey,  string message, int? messageTtlMs = null,bool mandatory = true)
         {
             EnsureInitialized();
 
@@ -164,6 +141,25 @@ namespace Zenith.Extensions.RabbitMQ
             if (!_isInitialized)
                 throw new InvalidOperationException("Please call InitializeAsync() first to establish the network stream!");
         }
+
+
+        /// <summary>
+        /// Initializes the connection and channel, enabling v7 fully asynchronous publisher tracking.
+        /// </summary>
+        public async Task InitializeAsync()
+        {
+            if (_isInitialized) return;
+
+            _connection = await _factory.CreateConnectionAsync();
+            var channelOptions = new CreateChannelOptions(publisherConfirmationsEnabled: true,publisherConfirmationTrackingEnabled: true
+            );
+
+            _channel = await _connection.CreateChannelAsync(channelOptions);
+            _channel.BasicReturnAsync += OnMessageReturnedAsync;
+            _isInitialized = true;
+        }
+
+
 
         /// <summary>
         /// Gracefully releases all connection and channel resources fully asynchronously.
