@@ -8,6 +8,9 @@ Every sub\-project maintains independent NuGet packages, standalone documentatio
 
 ## 📦 Included NuGet Packages
 
+<img width="1500" height="437" alt="image" src="https://github.com/user-attachments/assets/6f07d2b2-6a2f-483e-b303-882bc4484aca" />
+
+
 ### 1\. Zenith\.Extensions\.Redis
 
 Lightweight and high\-performance Redis operation library based on **StackExchange\.Redis**\. Fully encapsulates String, Set, Hash common data structures, supports generic auto serialization, sync/async dual APIs and null safety processing\. Simplifies Redis cache development for \.NET applications\.
@@ -44,4 +47,3 @@ Each module is independently released to NuGet\.org\. Developers can install any
 
 All Zenith\.Extensions open\-source libraries are free for personal, open\-source and commercial projects\. Welcome to use, learn and expand secondary functions\.
 
-> （注：部分内容可能由 AI 生成）
